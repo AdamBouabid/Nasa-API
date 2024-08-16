@@ -1,0 +1,24 @@
+{
+  "name": "nasa-ms-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm run install --prefix server",
+    "install-client": "npm run install --prefix client",
+    "install": "npm run install --prefix server && npm run install --prefix client",
+    "server": "npm run start --prefix server",
+    "client": "npm run start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start  --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+    "test": "npm run test  --prefix server && npm  run test --prefix client"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nsfwhub": "^0.0.2"
+  }
+}
